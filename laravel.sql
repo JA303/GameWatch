@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2021 at 09:22 AM
--- Server version: 10.4.16-MariaDB
--- PHP Version: 7.4.12
+-- Generation Time: Feb 06, 2021 at 10:48 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.3.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -195,7 +195,8 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id`, `user_id`, `title`, `slug`, `description`, `state`, `release_date`, `crack_date`, `game_studio_id`, `game_studio_name`, `image`, `header`, `back_image`, `video_link`, `screen_shots`, `system`, `prices`, `created_at`, `updated_at`) VALUES
 (1, NULL, 'Red Dead Redemption 2', 'RDR2', 'RDR2, as the game is affectionately known, was released for other platforms before the PC release, and this saw the game gaining the title of best-selling game of all time, before the PC game figures were included. The reason for the game’s popularity is not hard to see.\r\n\r\nUnlike games where mayhem and destruction are key, this game allows you to sink into the beauty of the Wild West scenery, and to form empathic and sympathetic bonds with other players and NPCs (non-playing characters) in the moments between the action driven sequences – of which there are also many.\r\n\r\nYou play as Arthur Morgan, a member of the Van der Linde Gang, and the linear storyline guides play through set story arcs, with Arthur completing missions and achieving objectives as he goes along, guided by the overall narrative.\r\n\r\nOnce each mission is complete, Arthur is free to wander the open world, exploring widely and uncovering new places and, occasionally, stumbling onto his next mission which he can play through before returning to his original point to continue from there.\r\n\r\nDespite the tightly plotted story arcs, the game is strongly player driven, with your decisions deciding where the game will take you next. You can linger along each journey, catching villains committing crimes, helping people in distress and helping them with side missions, or you can pass them by, ignoring all the NPCs in your determination to get to your next destination.', 'unreleased', '2020-11-10', NULL, NULL, 'Rocstar Game', 'RDR2_image_1612535066.png', 'RDR2_header_1612535066.png', 'RDR2_backimg_1612534835.png', 'https://www.youtube.com/embed/gmA6MrX81z4', '[\"RDR2_scr1_1612534835.jpeg\",\"RDR2_scr2_1612534835.jpeg\",\"RDR2_scr3_1612534835.jpeg\",\"RDR2_scr4_1612534835.jpeg\"]', '{\"min\":{\"os\":\"Windows 7\",\"cpu\":\"Intel Core i5-2500K \\/ AMD FX-6300\",\"ram\":\"8 GB\",\"gpu\":\"Nvidia GeForce GTX 770 2 Go \\/ AMD Radeon R9 280 3 Go\",\"hdd\":\"150 GB\"},\"rec\":{\"os\":\"Windows 10 (v1803)\",\"cpu\":\"Intel Core i7-4770K \\/ AMD Ryzen 5 1500X\",\"ram\":\"12 GB\",\"gpu\":\"Nvidia GeForce GTX 1060 6 Go \\/ AMD Radeon RX 480 4Go\",\"hdd\":\"150 GB\"}}', '{\"epic\":{\"price\":\"59.99$\",\"url\":\"https:\\/\\/epicgames.com\\/\"},\"steam\":{\"price\":\"59.99$\",\"url\":\"https:\\/\\/store.steampowered.com\\/\"}}', '2021-02-04 19:51:22', '2021-02-05 10:56:37'),
 (2, 2, 'GTA VI', 'GTAVI', 'NO DESCRIPTION', 'unreleased', '2022-03-01', NULL, NULL, 'Rock Star games', '_image_1612522820.jpeg', '_header_1612522820.jpeg', '_backimg_1612522820.jpeg', 'none', '[\"_scr1_1612522820.jpeg\",\"_scr2_1612522820.jpeg\",\"_scr3_1612522820.jpeg\",\"_scr4_1612522820.jpeg\"]', '{\"min\":{\"os\":\"none\",\"cpu\":\"none\",\"ram\":\"none\",\"gpu\":\"none\",\"hdd\":\"none\"},\"rec\":{\"os\":\"none\",\"cpu\":\"none\",\"ram\":\"none\",\"gpu\":\"none\",\"hdd\":\"none\"}}', '{\"epic\":{\"price\":\"none\",\"url\":\"none\"},\"steam\":{\"price\":\"none\",\"url\":\"none\"}}', '2021-02-05 07:30:20', '2021-02-05 07:30:20'),
-(3, 2, 'Red Dead Redemption 3', 'RDR3', 'NO DESCRIPTION', 'unreleased', '2019-11-10', '2020-11-10', NULL, 'Rock Star games', 'RDR3_image_1612540078.png', 'RDR3_header_1612540078.jpeg', 'RDR3_backimg_1612540078.jpeg', 'none', '[\"RDR3_scr1_1612540078.jpeg\",\"RDR3_scr2_1612540078.jpeg\",\"RDR3_scr3_1612540078.jpeg\",\"RDR3_scr4_1612540078.jpeg\"]', '{\"min\":{\"os\":\"none\",\"cpu\":\"none\",\"ram\":\"none\",\"gpu\":\"none\",\"hdd\":\"none\"},\"rec\":{\"os\":\"none\",\"cpu\":\"none\",\"ram\":\"none\",\"gpu\":\"none\",\"hdd\":\"none\"}}', '{\"epic\":{\"price\":\"none\",\"url\":\"20$\"},\"steam\":{\"price\":\"20$\",\"url\":\"none\"}}', '2021-02-05 12:17:58', '2021-02-05 12:17:58');
+(3, 2, 'Red Dead Redemption 3', 'RDR3', 'NO DESCRIPTION', 'unreleased', '2019-11-10', '2020-11-10', NULL, 'Rock Star games', 'RDR3_image_1612540078.png', 'RDR3_header_1612540078.jpeg', 'RDR3_backimg_1612540078.jpeg', 'none', '[\"RDR3_scr1_1612540078.jpeg\",\"RDR3_scr2_1612540078.jpeg\",\"RDR3_scr3_1612540078.jpeg\",\"RDR3_scr4_1612540078.jpeg\"]', '{\"min\":{\"os\":\"none\",\"cpu\":\"none\",\"ram\":\"none\",\"gpu\":\"none\",\"hdd\":\"none\"},\"rec\":{\"os\":\"none\",\"cpu\":\"none\",\"ram\":\"none\",\"gpu\":\"none\",\"hdd\":\"none\"}}', '{\"epic\":{\"price\":\"none\",\"url\":\"20$\"},\"steam\":{\"price\":\"20$\",\"url\":\"none\"}}', '2021-02-05 12:17:58', '2021-02-05 12:17:58'),
+(4, 2, 'CYBERPUNK 2077', 'CYBERPUNK-2077', '\"Seven years in the making, Cyberpunk 2077 looks to be living up to all the hype generated by its introduction at E3 in 2019.\r\n\r\nSet fifty-seven years after the table-top game upon which it is based, Cyberpunk 2020, the graphics are exquisitely rendered with characters, scenery and even actions and movements so realistic that they could be mistaken for movie footage.\r\n\r\nAs you play through the narrative driven game, it is possible to play without killing any other characters, using non-lethal weaponry and strategies that keep you out of serious confrontations of the sort that tend to become lethal.\r\n\r\nThe game features full nudity, as players are able to upgrade their bodies with modifications that give them extra powers and capabilities, and they need to strip down in order to fit their new limbs and attachments.\"', 'unreleased', '2020-12-10', '2020-12-10', NULL, 'Cd Red Project', 'CYBERPUNK-2077_image_1612604506.png', 'CYBERPUNK-2077_header_1612604506.png', 'CYBERPUNK-2077_backimg_1612604507.png', 'https://www.youtube.com/embed/BO8lX3hDU30', '[\"CYBERPUNK-2077_scr1_1612604507.jpg\",\"CYBERPUNK-2077_scr2_1612604507.jpg\",\"CYBERPUNK-2077_scr3_1612604507.jpg\",\"CYBERPUNK-2077_scr4_1612604507.jpg\"]', '{\"min\":{\"os\":\"Windows 7\",\"cpu\":\"Intel Core i5-2500K \\/ AMD FX-6300\",\"ram\":\"8 GB\",\"gpu\":\"Nvidia GeForce GTX 770 2 Go \\/ AMD Radeon R9 280 3 Go\",\"hdd\":\"150 GB\"},\"rec\":{\"os\":\"Windows 10 (v1803)\",\"cpu\":\"Intel Core i7-4770K \\/ AMD Ryzen 5 1500X\",\"ram\":\"12 GB\",\"gpu\":\"Nvidia GeForce GTX 1060 6 Go \\/ AMD Radeon RX 480 4Go\",\"hdd\":\"150 GB\"}}', '{\"epic\":{\"price\":\"https:\\/\\/store.steampowered.com\\/\",\"url\":\"56$\"},\"steam\":{\"price\":\"56$\",\"url\":\"https:\\/\\/epicgames.com\\/\"}}', '2021-02-06 06:11:47', '2021-02-06 06:11:47');
 
 -- --------------------------------------------------------
 
@@ -241,8 +242,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `roles`, `avatar`, `header`, `karma`, `description`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'JA303', 'a5213287@gmail.com', NULL, '$2y$10$tTsFGVKJOqg5jvHuCPUWgOnHfsqmrxj0Rpygu187kHYrdiDlKzEey', '[\"user\"]', 'user.jpg', 'gamer_header.jpg', 8, 'Hello World', NULL, '2021-02-04 16:21:48', '2021-02-05 17:54:45', NULL),
-(2, 'alien', 'jefek785891234@um.ac.ir', NULL, '$2y$10$uy2YAxiLXKiUktVs6RaVzep9wL.qBEyBSqE/vUAPJDX49xoGOM89q', '[\"user\",\"admin\"]', '2_avatar_1612511454.png', 'gamer_header.jpg', 19, 'No description', NULL, '2021-02-04 17:58:46', '2021-02-05 17:54:49', NULL),
+(1, 'JA303', 'a5213287@gmail.com', NULL, '$2y$10$tTsFGVKJOqg5jvHuCPUWgOnHfsqmrxj0Rpygu187kHYrdiDlKzEey', '[\"user\"]', 'user.jpg', 'gamer_header.jpg', 7, 'Hello World', NULL, '2021-02-04 16:21:48', '2021-02-06 06:13:43', NULL),
+(2, 'alien', 'jefek785891234@um.ac.ir', NULL, '$2y$10$uy2YAxiLXKiUktVs6RaVzep9wL.qBEyBSqE/vUAPJDX49xoGOM89q', '[\"user\",\"admin\"]', '2_avatar_1612511454.png', 'gamer_header.jpg', 29, 'No description', NULL, '2021-02-04 17:58:46', '2021-02-06 06:11:47', NULL),
 (3, 'TheBigSheikh', 'a5287@gmail.com', NULL, '$2y$10$bWld8Cni48xRC9h86dMqk.iWRof0XL4mDNYnNYnErBuSYA./WKgbG', '[\"user\"]', '3_avatar_1612558642.jpeg', 'gamer_header.jpg', 0, 'No description', NULL, '2021-02-05 17:27:00', '2021-02-05 18:32:56', NULL);
 
 -- --------------------------------------------------------
@@ -268,12 +269,13 @@ INSERT INTO `votes` (`id`, `user_id`, `comment_id`, `up_vote`, `created_at`, `up
 (1, 2, 1, 1, '2021-02-04 18:02:55', '2021-02-04 18:09:18'),
 (2, 2, 5, 1, '2021-02-04 18:09:46', '2021-02-05 10:15:50'),
 (3, 2, 6, 1, '2021-02-04 18:09:48', '2021-02-04 18:09:48'),
-(4, 2, 2, 1, '2021-02-04 18:16:55', '2021-02-05 08:31:15'),
+(4, 2, 2, 1, '2021-02-04 18:16:55', '2021-02-06 06:13:43'),
 (5, 3, 12, 1, '2021-02-05 17:41:08', '2021-02-05 17:41:08'),
 (6, 3, 6, 1, '2021-02-05 17:41:54', '2021-02-05 17:54:45'),
 (7, 3, 1, 1, '2021-02-05 17:42:09', '2021-02-05 17:42:09'),
 (8, 3, 5, 1, '2021-02-05 17:42:11', '2021-02-05 17:54:42'),
-(9, 3, 13, 0, '2021-02-05 17:54:48', '2021-02-05 17:54:49');
+(9, 3, 13, 0, '2021-02-05 17:54:48', '2021-02-05 17:54:49'),
+(10, 2, 10, 0, '2021-02-06 06:13:36', '2021-02-06 06:13:36');
 
 --
 -- Indexes for dumped tables
@@ -386,7 +388,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `reports`
@@ -404,7 +406,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `votes`
 --
 ALTER TABLE `votes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
