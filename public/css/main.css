@@ -200,3 +200,19 @@ p.rtl {
   .title-text-holder{
       border-bottom: 2px solid #494A4F;
   }
+  .round-corner-1{
+      border-radius: 0.3em;
+  }
+  .round-corner-2{
+    border-radius: 0.5em;
+}
+.rank-holder{
+    height: 45px;
+     margin: 50px 0;    
+}
+.shadow-box-1{
+    box-shadow: 1px 1px 3px #000000;;
+}
+.green-text{
+    color: #34ff82 !important;
+}
