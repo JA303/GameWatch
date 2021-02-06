@@ -7,8 +7,6 @@
 <link rel="stylesheet" href="{{ asset('css/gameEditor.css') }}">
 
 <!-- External JS -->
-<script src="{{ asset('js/gameEditor.js') }} "></script>
-
 <script>
     function readURL(input, imgId) {
         if (input.files && input.files[0]) {
@@ -403,5 +401,6 @@
     </div>
 </div>
     </form>
+            <script src="{{ asset('js/gameEditor.js') }} "></script>
 
 @endsection
