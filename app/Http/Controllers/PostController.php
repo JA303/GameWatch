@@ -16,7 +16,7 @@ class PostController extends Controller
     public function __construct()
     {
         $this->middleware('role:user,admin')->except('index', 'show');
-        $this->middleware('role:admin')->only('create', 'edit');
+        $this->middleware('role:admin')->only('create', 'edit', 'delete');
     }
 
     public function index(Request $request)
@@ -134,7 +134,7 @@ class PostController extends Controller
         $post->release_date = $request->r_date;
         $post->crack_date = $request->c_date;
         $post->video_link = $request->v_link;
-        $post->prices = ['epic' => ['price' => $request->epic_link ,'url' => $request->epic_p], 'steam' => ['price' => $request->steam_p ,'url' => $request->steam_link]];
+        $post->prices = ['epic' => ['price' => $request->epic_p ,'url' => $request->epic_link], 'steam' => ['price' => $request->steam_p ,'url' => $request->steam_link]];
         $post->system = [
             'min' => [
                 'os' => $request->m_os,
@@ -315,13 +315,29 @@ class PostController extends Controller
             ->with('success','You have successfully edit post.');
     }
 
-    public function show(Post $post) {
-        $comments = $post->comments()->paginate(10);
-        return view('post.game',compact('post', 'comments'));
+    public function delete(Post $post, Request $request) {
+        try {
+            //delete images
+            $this->delete_image($post->image);
+            $this->delete_image($post->header);
+            $this->delete_image($post->back_image);
+            $this->delete_image($post->screen_shots[0]);
+            $this->delete_image($post->screen_shots[1]);
+            $this->delete_image($post->screen_shots[2]);
+            $this->delete_image($post->screen_shots[3]);
+
+            $post->followers()->detach();
+            $post->delete();
+        } catch (\Exception $e) {
+            return back()
+                ->withErrors('$e');
+        }
+        return redirect('/');
     }
 
-    public function delete(Post $post) {
-
+    public function show(Post $post) {
+        $comments = $post->comments()->paginate(15);
+        return view('post.game',compact('post', 'comments'));
     }
 
     public function follow(Post $post, Request $request) {

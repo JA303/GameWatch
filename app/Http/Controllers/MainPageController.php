@@ -17,7 +17,7 @@ class MainPageController extends Controller
             ->take(8)
             ->get();
 
-        $hot_games = Post::findMany([1, 2, 3, 4]);
+        $hot_games = Post::query()->take(4)->get();
 
         $coming_soon_games = Post::whereDate('release_date', '>=', Carbon::now())
             ->orderBy('release_date')

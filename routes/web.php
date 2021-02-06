@@ -22,7 +22,7 @@ Route::middleware(['throttle:api'])->group(function () {
     Auth::routes();
 
     //profile gamer
-    Route::get('/gamer/{user:name}', [\App\Http\Controllers\ProfileController::class, 'index'])->name('user.profile');
+    Route::get('/gamer/{user:name}', [\App\Http\Controllers\ProfileController::class, 'index_games'])->name('user.profile');
     Route::get('/gamer/{user:name}/games', [\App\Http\Controllers\ProfileController::class, 'index_games'])->name('user.profile.games');
     Route::get('/gamer/{user:name}/comments', [\App\Http\Controllers\ProfileController::class, 'index_comments'])->name('user.profile.comments');
 
@@ -43,6 +43,7 @@ Route::middleware(['throttle:api'])->group(function () {
     Route::get('/game/create', [App\Http\Controllers\PostController::class, 'create'])->name('games.create');
     Route::post('/game/create/store', [App\Http\Controllers\PostController::class, 'store'])->name('games.store');
     Route::post('/games/{post:slug}/edit/store', [App\Http\Controllers\PostController::class, 'edit_store'])->name('games.edit.store');
+    Route::post('/games/{post:slug}/edit/delete', [App\Http\Controllers\PostController::class, 'delete'])->name('games.edit.delete');
 
     //comment
 

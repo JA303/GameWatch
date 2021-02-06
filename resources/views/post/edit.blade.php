@@ -392,15 +392,35 @@
     </div>
     <!-- Buttons -->
     <div class="row pb-5">
-        <div class="col-6 d-flex flex-column align-items-center">
-            <button type="submit" class="btn btn-dark">Save</button>
-        </div>
-        <div class="col-6 d-flex flex-column align-items-center">
-            <button class="btn btn-danger">Delete Game</button>
-        </div>
+        @if($edit)
+            <div class="col-6 d-flex flex-column align-items-center">
+                <button type="submit" class="btn btn-dark">Save</button>
+            </div>
+            <div class="col-6 d-flex flex-column align-items-center">
+                <script type="text/javascript">
+                    function confirmDeleteGame() {
+                        if (confirm('Do you want to Delete Game? (Warning!)')) {
+                            document.getElementById('delete-game').submit();
+                        } else {
+                            return false;
+                        }
+                    }
+                </script>
+                <a class="btn btn-danger text-white" onclick="confirmDeleteGame()">Delete Game</a>
+            </div>
+        @else
+            <div class="col d-flex flex-column align-items-center">
+                <button type="submit" class="btn btn-dark">Save</button>
+            </div>
+        @endif
     </div>
 </div>
     </form>
+        @if($edit)
+            <form id="delete-game" method="POST" action="{{ route('games.edit.delete', $post) }}">
+                @csrf
+            </form>
+        @endif
             <script src="{{ asset('js/gameEditor.js') }} "></script>
 
 @endsection
