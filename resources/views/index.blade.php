@@ -152,7 +152,7 @@
         <!-- You can add more col in this row -->
         <div class="row">
             @foreach($most_followed_games as $game)
-                @include('post.partials.game_col', ['game']);
+                @include('post.partials.game_col', ['game'])
             @endforeach
         </div>
     </div>
@@ -172,7 +172,7 @@
             <!-- You can add more col in this row -->
             <div class="row">
                 @foreach($most_commented_game as $game)
-                    @include('post.partials.game_col', ['game']);
+                    @include('post.partials.game_col', ['game'])
                 @endforeach
             </div>
         </div>
@@ -214,7 +214,7 @@
             <!-- You can add more col in this row -->
             <div class="row">
                 @foreach($coming_soon_games as $game)
-                    @include('post.partials.game_col', ['game']);
+                    @include('post.partials.game_col', ['game'])
                 @endforeach
             </div>
         </div>
