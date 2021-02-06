@@ -135,14 +135,14 @@
     </div>
 
     <!-- Ad-->
-    <a href="https://www.kinguin.net/category/64435/cyberpunk-2077-gog-cd-key"><div class=" container ad-container "
+    <a href="https://www.kinguin.net/category/64435/cyberpunk-2077-gog-cd-key" target="_blank"><div class=" container ad-container "
     style="background-image: url({{ asset('img/ad.png') }});"></div>  </a>
 
     <!-- Section Title -->
     <div class="title-holder container">
         <div class=" row">
             <!-- Title -->
-            <span class=" py-1">Best Games</span>
+            <span class=" py-1">Most Followed Games</span>
         </div>
         <div class="title-text-holder row"></div>
     </div>
@@ -154,6 +154,48 @@
             @foreach($most_followed_games as $game)
                 @include('post.partials.game_col', ['game']);
             @endforeach
+        </div>
+    </div>
+
+    @if(count($most_commented_game) > 0)
+        <!-- Section Title -->
+        <div class="title-holder container">
+            <div class=" row">
+                <!-- Title -->
+                <span class=" py-1">Most Commented Games of the week</span>
+            </div>
+            <div class="title-text-holder row"></div>
+        </div>
+
+        <!-- Games Row -->
+        <div class="container">
+            <!-- You can add more col in this row -->
+            <div class="row">
+                @foreach($most_commented_game as $game)
+                    @include('post.partials.game_col', ['game']);
+                @endforeach
+            </div>
+        </div>
+    @endif
+
+
+    <!-- Section Title -->
+    <div class="title-holder container">
+        <div class=" row">
+            <!-- Title -->
+            <span class=" py-1">Best Comments Of Week</span>
+        </div>
+        <div class="title-text-holder row"></div>
+    </div>
+    <!-- Comments -->
+    <div class=" container">
+        <!-- Comment -->
+        @foreach($best_weekly_comments as $comment)
+            @include('post.partials.comment', [$comment , 'level' => 0])
+        @endforeach
+
+        <div class="d-flex justify-content-center mt-2 md-4">
+            <a class="btn btn-dark" href="{{ route('comment.bestOfWeek') }}">Show more</a>
         </div>
     </div>
 
@@ -177,26 +219,6 @@
             </div>
         </div>
     @endif
-
-    <!-- Section Title -->
-    <div class="title-holder container">
-        <div class=" row">
-            <!-- Title -->
-            <span class=" py-1">Best Comments Of Week</span>
-        </div>
-        <div class="title-text-holder row"></div>
-    </div>
-    <!-- Comments -->
-    <div class=" container">
-        <!-- Comment -->
-        @foreach($best_weekly_comments as $comment)
-            @include('post.partials.comment', [$comment , 'level' => 0])
-        @endforeach
-
-        <div class="d-flex justify-content-center mt-2 md-4">
-            <a class="btn btn-dark" href="{{ route('comment.bestOfWeek') }}">Show more</a>
-        </div>
-    </div>
 
     <!-- Section Title -->
     <div class="title-holder container">
