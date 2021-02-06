@@ -216,3 +216,12 @@ p.rtl {
 .green-text{
     color: #34ff82 !important;
 }
+.ad-container{
+    margin-top: 1.3em;
+    
+    background-repeat: no-repeat;
+    background-size :cover;
+    height: 200px;
+    border-radius: 0.3em;
+    cursor: pointer;
+}

@@ -133,6 +133,10 @@
             </div>
         </div>
     </div>
+                            
+    <!-- Ad-->       
+    <a href="https://www.kinguin.net/category/64435/cyberpunk-2077-gog-cd-key"><div class=" container ad-container " 
+    style="background-image: url(http://127.0.0.1:8000/img/ad.png );"></div>  </a>
 
     <!-- Section Title -->
     <div class="title-holder container">

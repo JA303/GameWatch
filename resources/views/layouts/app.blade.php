@@ -47,7 +47,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md  navbar-dark ">
+        <nav class="fix-nav navbar navbar-fixed-top  navbar-expand-md  navbar-dark " >
             <a class="navbar-brand" href="{{ route('index') }}"> <img class="logo-nav-image" src="{{ asset('img/logo.png') }}" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>

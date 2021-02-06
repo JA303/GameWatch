@@ -15,3 +15,10 @@
 .nav-btn{
     padding: 0.5em 1em 0.5em 1em !important;
 }
+.fix-nav{
+    position: fixed !important;
+    top: 0!important;
+  left: 0!important;
+  z-index: 999!important;
+  width: 100%!important;
+}
