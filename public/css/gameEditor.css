@@ -1,0 +1,23 @@
+.reply-text-area{
+    resize:vertical;
+    display:block;
+    box-sizing:border-box;
+    width: 97%;    
+    outline:0px none transparent;
+    color: whitesmoke;   
+    background-color: #27282E;
+    border: none;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+.bg-dark{
+    background-color: #27282E !important;
+}
+.bg-dark:hover{
+    color: whitesmoke !important;
+}

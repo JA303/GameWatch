@@ -1,0 +1,18 @@
+.color-change-2x {
+    background: linear-gradient(45deg, #39d900, #ff0000, #813100, #0036ff);
+    background-size: 300% 300%;
+    animation: color-change-2x 5s ease infinite;
+}
+
+@keyframes color-change-2x {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+

@@ -1,0 +1,17 @@
+.logo-nav-image{
+    height: 40px;
+}
+.navbar-expand-md{
+    background-color: #101012 !important;
+}
+.nav-link{
+    color: whitesmoke !important;
+    font-weight: bold !important;
+}
+.nav-user{
+    padding-right: 0.8em !important;
+    font-size: 1.7em;
+}
+.nav-btn{
+    padding: 0.5em 1em 0.5em 1em !important;
+}

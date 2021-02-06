@@ -1,0 +1,76 @@
+.filter-container{
+    background-color: #161618;
+  }
+  .status-dropDown{
+    background-color: #27282F;
+    border-radius: 5px;
+  }
+  .status-dropDown-button{
+    width:100%;  
+    color: whitesmoke;
+  }
+  .btn{
+    width: 100% !important;
+  }
+  .btn:hover{
+    color: rgb(204, 204, 204) !important;
+  }
+  .search {
+width: 100%;
+position: relative;
+display: flex;
+}
+
+.searchTerm {
+width: auto;
+border: 3px solid #27282F;
+border-right: none;
+padding: 5px;
+height: 36px;
+border-radius: 5px 0 0 5px;
+outline: none;
+color: #9DBFAF;
+}
+
+.searchTerm:focus{
+color: #ffffff;
+}
+
+.searchButton {
+width: 40px;
+height: 36px;
+border: 1px solid#27282F;
+background: #27282F;
+text-align: center;
+color: #fff;
+border-radius: 0 5px 5px 0;
+cursor: pointer;
+font-size: 20px;
+}
+.search-box-text{
+background-color: #27282F;
+color: whitesmoke;
+}
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+width: auto;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.sort-text{
+color: whitesmoke;
+display: flex;
+align-items: center;
+}
+.btn-filter{
+color: whitesmoke;
+width: 100% !important;
+background-color: rgba(255, 255, 255, 0);
+border: none;
+}
+.btn-filter:focus{
+outline: 0 !important;
+border-bottom: 2px solid whitesmoke;
+}
