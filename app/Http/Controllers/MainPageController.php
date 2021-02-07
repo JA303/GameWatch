@@ -6,6 +6,7 @@ use App\Models\Comment;
 use App\Models\Post;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use DB;
 
 class MainPageController extends Controller
 {
@@ -21,23 +22,21 @@ class MainPageController extends Controller
 
         $most_commented_game = Post::withCount(['comments' => function ($query) {
             $query->whereDate('created_at', '>=' , now()->subWeek());
-        }])->take(8)->get();
+        }])->orderBy('comments_count', 'desc')->take(8)->get();
 
         $coming_soon_games = Post::whereDate('release_date', '>=', Carbon::now())
             ->orderBy('release_date')
             ->take(8)
-            ->get();
+            ->get();;
 
-        $best_comments = Comment::withCount('votes')
-            ->orderBy('votes_count', 'desc')
+        $best_comments = Comment::withCount(['up_votes', 'down_votes'])
+            ->orderBy(DB::raw("`up_votes_count` - `down_votes_count`"), 'desc')
             ->take(15)
             ->get();
 
-//        $day_start = now()->subWeek();
-
-        $best_weekly_comments = Comment::whereDate('created_at', '>' , now()->subWeek())
-            ->withCount('votes')
-            ->orderBy('votes_count', 'desc')
+        $best_weekly_comments = Comment::whereDate('created_at', '>=' , now()->subWeek())
+            ->withCount(['up_votes', 'down_votes'])
+            ->orderBy(DB::raw("`up_votes_count` - `down_votes_count`"), 'desc')
             ->take(15)
             ->get();
 

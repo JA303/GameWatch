@@ -12,12 +12,12 @@
             <div class=" d-flex justify-content-center pt-2 arr">
                 @auth()
                     @if($comment->user->id != auth()->user()->id)
-                        <i class="arr-up" @if($up_vote === 1) style="background-color: green"  @endif id="comment{{ $comment->id }}-upvote" onclick="voteAJAX({{$comment->id}}, '{{ route('comment.vote' , $comment) }}', true)"></i>
+                        <i class="arr-up" @if($up_vote === 1) style="border-color: green"  @endif id="comment{{ $comment->id }}-upvote" onclick="voteAJAX({{$comment->id}}, '{{ route('comment.vote' , $comment) }}', true)"></i>
                     @else
                         <i class="arr-up" onclick="alert('You cant vote your comment')"></i>
                     @endif
                 @else
-                    <a href="{{ route('login') }}"><i class="arr-up"></i></a>
+                    <i class="arr-up" onClick="location.href='{{ route('login') }}'"></i>
                 @endauth
             </div>
             <div class="d-flex justify-content-center rate-num" id="comment{{ $comment->id }}-vote">
@@ -26,12 +26,12 @@
             <div class="d-flex justify-content-center pb-2 arr">
                 @auth()
                     @if($comment->user->id != auth()->user()->id)
-                        <i class="arr-down" @if($up_vote === 0) style="background-color: red"  @endif id="comment{{ $comment->id }}-downvote" onclick="voteAJAX({{$comment->id}}, '{{ route('comment.vote', $comment) }}', false)"></i>
+                        <i class="arr-down" @if($up_vote === 0) style="border-color: red"  @endif id="comment{{ $comment->id }}-downvote" onclick="voteAJAX({{$comment->id}}, '{{ route('comment.vote', $comment) }}', false)"></i>
                     @else
                         <i class="arr-down" onclick="alert('You cant vote your comment')"></i>
                     @endif
                 @else
-                    <a href="{{ route('login') }}"><i class="arr-down"></i></a>
+                    <i class="arr-down" onClick="location.href='{{ route('login') }}'"></i>
                 @endauth
             </div>
         @endif
@@ -51,12 +51,13 @@
                         </p>
                     </div>
                 </div>
+                @if(!$comment->hide && $comment->image != '')
                 <div class="row ">
                     <div class=" col-12 no-padding-col">
-                        <img style="max-height: 200px;" @if(!$comment->hide) src="{{ asset('uploads/comment_imgs').'/'.$comment->image }}" @endif alt="">
+                        <img style="max-height: 200px;" src="{{ asset('uploads/comment_imgs').'/'.$comment->image }}" alt="">
                     </div>
                 </div>
-
+                @endif
 
                 <div class="row  pb-1">
 

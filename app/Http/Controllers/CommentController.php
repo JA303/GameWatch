@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\Vote;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\True_;
+use DB;
 
 class CommentController extends Controller
 {
@@ -17,8 +18,8 @@ class CommentController extends Controller
 
     public function index_bests() {
         $title = 'Best Comments';
-        $comments = Comment::withCount('votes')
-            ->orderBy('votes_count', 'desc')
+        $comments = Comment::withCount(['up_votes', 'down_votes'])
+            ->orderBy(DB::raw("`up_votes_count` - `down_votes_count`"), 'desc')
             ->paginate(30);
 
         return view('comments', compact(['title', 'comments']));
@@ -27,10 +28,9 @@ class CommentController extends Controller
     public function index_week_bests() {
         $title = 'Best Comments Of Week';
         $comments = Comment::whereDate('created_at', '>' , now()->subWeek())
-            ->withCount('votes')
-            ->orderBy('votes_count', 'desc')
+            ->withCount(['up_votes', 'down_votes'])
+            ->orderBy(DB::raw("`up_votes_count` - `down_votes_count`"), 'desc')
             ->paginate(30);
-
 
         return view('comments', compact(['title', 'comments']));
     }

@@ -28,6 +28,14 @@ class Comment extends Model
         return $this->hasMany(Vote::class, 'comment_id');
     }
 
+    public function up_votes() {
+        return $this->hasMany(Vote::class, 'comment_id')->where('up_vote', true);
+    }
+
+    public function down_votes() {
+        return $this->hasMany(Vote::class, 'comment_id')->where('up_vote', false);
+    }
+
     public function sumOfVotes() {
         $votes = $this->votes;
         $upVoteCount = $votes->where('up_vote', true)->count();

@@ -15,11 +15,11 @@ function voteAJAX(commentId, route, upVote) {
             if(data.success === true) {
                 $('#comment' + commentId + '-vote').text(data.UpVoteCount - data.DownVoteCount);
                 if(upVote) {
-                    $('#comment' + commentId + '-downvote').css('background-color', '');
-                    $('#comment' + commentId + '-upvote').css('background-color', 'green');
+                    $('#comment' + commentId + '-downvote').css('border-color', '');
+                    $('#comment' + commentId + '-upvote').css('border-color', 'green');
                 } else {
-                    $('#comment' + commentId + '-downvote').css('background-color', 'red');
-                    $('#comment' + commentId + '-upvote').css('background-color', '');
+                    $('#comment' + commentId + '-downvote').css('border-color', 'red');
+                    $('#comment' + commentId + '-upvote').css('border-color', '');
                 }
 
             } else {
