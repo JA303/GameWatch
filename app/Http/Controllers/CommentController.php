@@ -37,19 +37,20 @@ class CommentController extends Controller
 
     public function store(Post $post, Request $request)
     {
-        $comment = new Comment;
-
         $comment_text = $request->comment;
         if(!$comment_text){
             return back()
                 ->withErrors(['comment is null']);
         }
+
+        $comment = new Comment;
+
         if($request->comment_image != null) {
             $request->validate([
                 'comment_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
             ]);
 
-            $fileName = $comment->id.'_'.time().'.'.$request->comment_image->extension();
+            $fileName = $request->user()->id.'_'.time().'.'.$request->comment_image->extension();
             $request->comment_image->move(public_path('uploads/comment_imgs/'), $fileName);
 
             $comment->image = $fileName;
@@ -60,8 +61,6 @@ class CommentController extends Controller
         $comment->user()->associate($request->user());
 
 //        $post = Post::find($request->post_id);
-
-
 
         $post->comments()->save($comment);
 
@@ -75,7 +74,19 @@ class CommentController extends Controller
             return back()
                 ->withErrors(['comment is null']);
         }
+
         $reply = new Comment();
+
+        if($request->comment_image != null) {
+            $request->validate([
+                'comment_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+            ]);
+
+            $fileName = $request->user()->id.'_'.time().'.'.$request->comment_image->extension();
+            $request->comment_image->move(public_path('uploads/comment_imgs/'), $fileName);
+
+            $reply->image = $fileName;
+        }
 
         $reply->comment = $comment_text;
 
