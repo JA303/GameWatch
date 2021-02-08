@@ -8,6 +8,14 @@
 <link rel="stylesheet" href="{{ asset('css/gamer.css') }}">
 
 <style>
+ body{
+        background-image: url("{{{ asset('img/gamer_backGround.jpg') }}}");
+        background-color: rgba(17, 17, 17, 0.671);
+        background-blend-mode:saturation;
+        background-size: cover; 
+        background-attachment: fixed;
+        background-position: center;
+    }
     .game-header-row{
         background-image: url("{{{ asset('uploads/gamer_headers/' . $user->header) }}}"), linear-gradient(rgba(5, 5, 5, 0.671),rgba(20, 20, 20, 0.808));
         background-blend-mode:saturation;
@@ -20,11 +28,11 @@
 <div class=" container mt-5">
     <div class=" row no-gutters game-header-row header-border">
         <!-- Avatar -->
-        <div class=" col-xl-3 col-md-3 justify-content-center align-self-center" style="text-align: center">
-            <h3 style="color: yellow">KARMA: {{ $user->karma }}</h3>
+        <div class=" col-xl-3 col-md-3 justify-content-center " style="text-align: center">
+            
             <img class="header-avatar-imagee my-3" src="{{ asset('uploads/avatars/' . $user->avatar) }}" alt="{{{ $user->name . ' avatar' }}}">
             @if($user->hasRole('admin'))
-                <h2 style="color: red" class="my-2">ADMIN</h2>
+                <p class="text-danger display-4 pb-3">ADMIN</p>
             @endif
         </div>
         <!-- summery -->
@@ -44,6 +52,8 @@
         </div>
         <!-- Edit-Enable it for logined user -->
         <div class="col-xl-3 col-md-12 col-12 d-flex flex-column align-items-center align-self-center">
+        <p class="white-text" >KARMA</p>
+        <p class="white-text display-4" > <img class="pb-2 pr-2" src="{{{ asset('img/karma.svg') }}}" alt="">{{ $user->karma }}</p>
             @auth()
                 <div class="row">
                 @if($user == Auth::user())

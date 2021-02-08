@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>karma</title>
+    <desc>Created with Sketch.</desc>
+    <g id="user-page-2019" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-768.000000, -480.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="test-2" transform="translate(149.000000, 418.000000)">
+                <g id="Karma" transform="translate(620.000000, 18.000000)">
+                    <g id="Group-4" transform="translate(0.000000, 39.000000)">
+                        <g id="karma" transform="translate(0.000000, 6.000000)">
+                            <circle id="Oval" cx="12" cy="12" r="12"></circle>
+                            <path d="M10,12 C12.0817368,10.203311 13.5814334,8.31053503 14.6854395,6.31512579 C15.7918549,4.31536204 16.5008509,2.21251652 17,0" id="Path-6"></path>
+                            <path d="M10,24 C12.0817368,22.203311 13.5814334,20.310535 14.6854395,18.3151258 C15.7918549,16.315362 16.5008509,14.2125165 17,12" id="Path-6" transform="translate(13.500000, 18.000000) scale(-1, 1) rotate(-180.000000) translate(-13.500000, -18.000000) "></path>
+                            <path d="M10,24 L10,0" id="Path-7"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
