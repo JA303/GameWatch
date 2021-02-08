@@ -51,13 +51,13 @@
             <div class="row  no-gutters">
                 <div  class=" col-6 pt-3 ">
                     <p class="gray-text">RELEASE DATE</p>
-                    <p class="date-text">{{ $post->release_date->format('F d, Y') }}</p>
+                    <p class="date-text">{{ $post->release_date->format('M d, Y') }}</p>
                 </div>
                 <div class=" col-6 pt-3">
                     <p class="gray-text">CRACK DATE</p>
                     <p class="date-text">
                         @if($post->crack_date != null)
-                            {{ $post->crack_date->format('F d, Y') }}
+                            {{ $post->crack_date->format('M d, Y') }}
                         @endif
                     </p>
                 </div>

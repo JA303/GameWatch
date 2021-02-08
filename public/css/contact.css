@@ -1,0 +1,33 @@
+.padding-contact{
+    padding-top: 15em; 
+}
+.yellow-front{
+    color: #F0C40D ;
+}
+.yellow-back{
+    background-color: #F0C40D;
+}
+.email-link{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border-bottom: solid 2px  #F0C40D;
+    text-decoration: none;
+}
+.email-link:hover{
+    color: whitesmoke;
+    text-decoration: none;
+    border: none;
+}
+
+.li-social{
+    float: left;
+    
+    list-style-type: none;   
+}
+
+.li-social-link img{
+    height: 40px;
+}
+  
+  
+  

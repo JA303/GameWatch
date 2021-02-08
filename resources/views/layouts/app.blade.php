@@ -64,7 +64,7 @@
                         <a class="nav-link" href="{{ route('ranking') }}">Ranking</a>
                     </li>
                     <li style=" display: block; float: right;" class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
                     </li>
                 </ul>
             </div>

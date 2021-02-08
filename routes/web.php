@@ -18,6 +18,8 @@ Route::middleware(['throttle:api'])->group(function () {
 
     Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index'])->name('index');
     Route::get('/ranking', [\App\Http\Controllers\UserController::class, 'index_ranking'])->name('ranking');
+    Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'index'])->name('contact');
+    Route::get('/contact/send', [\App\Http\Controllers\ContactController::class, 'send_message'])->name('contact.send');
 
     Auth::routes();
 

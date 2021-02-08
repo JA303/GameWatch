@@ -4,7 +4,7 @@
 <!-- Backgrounds Image - these css (image) needs to feed from server -->
 <!-- External CSS -->
 <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-<link rel="stylesheet" href="{{ asset('css/Game.css') }}">
+<link rel="stylesheet" href="{{ asset('css/game.css') }}">
 <link rel="stylesheet" href="{{ asset('css/gamer.css') }}">
 
 <style>
