@@ -7,6 +7,7 @@ use App\Models\Post;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Mail;
+use App\Mail\ContactEmail;
 
 class ContactController extends Controller
 {
@@ -26,25 +27,23 @@ class ContactController extends Controller
             'message' => 'required|string|max:1024',
         ]);
 
-        $data = 'name: '.$request->name.'\n'
-        .'last name: '.$request->surname.'\n'
-        .'email: '.$request->email.'\n'
-        .'need: '.$request->need.'\n'
-        .'message: \n '.$request->message;
+        // $data = '<h3>name: '.$request->name.'</h3><br>'
+        // .'<h3>last name: '.$request->surname.'</h3><br>'
+        // .'<h3>email: '.$request->email.'</h3><br>'
+        // .'<h3>need: '.$request->need.'</h3><br>'
+        // .'<h4>message:</h4><br><p> '.$request->message.'</p>';
 
-        try {
-            Mail::raw($data, function($message) use($request) {
-                $message->to('Contact@GamesWatch.ir')
-                ->subject('Game Watch Contact Us Message')
-                ->from($request->email);
-            });
-        } catch (\Exception $e) {
-            return back()
-        ->withErrors('Message Could Not Be Sent, Sorry :(');
-        }
+        $data = ['message' => $request->message, 'surname' => $request->surname, 'email' => $request->email, 'need' => $request->need, 'name' => $request->name];
+
+        Mail::to('Contact@GamesWatch.ir')->send(new ContactEmail($data));
         
-
+            // Mail::raw($data, function($message) use($request) {
+            //     $message->to('Contact@GamesWatch.ir')
+            //     ->subject('Game Watch Contact Us Message')
+            //     ->from($request->email);
+            // });
+        
         return back()
-        ->withSuccess('Your Message Has Been Sent, Thanks!');
+            ->withSuccess('Your Message Has Been Sent, Thanks!');
     }
 }

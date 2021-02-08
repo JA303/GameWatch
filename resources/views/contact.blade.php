@@ -85,10 +85,10 @@
                                 <div class="form-group">
                                     <label for="form_need">Please specify your need *</label>
                                     <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
-                                        <option value=""></option>
-                                        <option value="Request quotation">Report Bug</option>
-                                        <option value="Request order status">Suggestion</option>
-                                        <option value="Request copy of an invoice">Cooperation Requeste</option>
+                                        <option value="None"></option>
+                                        <option value="Report Bug">Report Bug</option>
+                                        <option value="Suggestion">Suggestion</option>
+                                        <option value="Cooperation Requeste">Cooperation Requeste</option>
                                         <option value="Other">Other</option>
                                     </select>
                                     <div class="help-block with-errors"></div>
