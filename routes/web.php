@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['throttle:api'])->group(function () {
+Route::middleware(['throttle:40,1'])->group(function () {
 
     Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index'])->name('index');
     Route::get('/ranking', [\App\Http\Controllers\UserController::class, 'index_ranking'])->name('ranking');
@@ -48,12 +48,11 @@ Route::middleware(['throttle:api'])->group(function () {
     Route::post('/games/{post:slug}/edit/delete', [App\Http\Controllers\PostController::class, 'delete'])->name('games.edit.delete');
 
     //comment
-
-    //Route::get('/games/{post:slug}/comment', [App\Http\Controllers\CommentController::class, 'store'])->name('comment.add');
     Route::post('/games/{post:slug}/comment', [App\Http\Controllers\CommentController::class, 'store'])->name('comment.add');
     Route::get('/comments/bestOfWeek', [App\Http\Controllers\CommentController::class, 'index_week_bests'])->name('comment.bestOfWeek');
     Route::get('/comments/bests', [App\Http\Controllers\CommentController::class, 'index_bests'])->name('comment.bests');
     Route::post('/comment/{comment:id}/reply', [App\Http\Controllers\CommentController::class, 'replyStore'])->name('comment.reply');
     Route::post('/comment/{comment:id}/vote',[App\Http\Controllers\CommentController::class, 'voteComment'])->name('comment.vote');
     Route::post('/comment/{comment:id}/delete',[App\Http\Controllers\CommentController::class, 'delete'])->name('comment.delete')->middleware('role:admin');
+
 });

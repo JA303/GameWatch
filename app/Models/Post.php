@@ -45,6 +45,10 @@ class Post extends Model
         return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id');
     }
 
+    public function all_comments() {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
+
     public function isBelongsTo(User $user){
         return $this->user_id == $user->id;
     }

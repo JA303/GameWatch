@@ -13,7 +13,8 @@ class CommentController extends Controller
 {
 
     public function __construct() {
-        $this->middleware('role:user,admin')->except(['index_bests', 'index_week_bests']);
+        $this->middleware('role:user')->except(['index_bests', 'index_week_bests', 'delete']);
+        // $this->middleware('role:admin')->except(['index_bests', 'index_week_bests']);
     }
 
     public function index_bests() {
