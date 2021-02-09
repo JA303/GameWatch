@@ -218,10 +218,14 @@ p.rtl {
 }
 .ad-container{
     margin-top: 1.3em;
+    background-size:     contain ;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center ; 
     
-    background-repeat: no-repeat;
-    background-size :cover;
     height: 200px;
+    max-height: 200px;
     border-radius: 0.3em;
     cursor: pointer;
+
+   
 }

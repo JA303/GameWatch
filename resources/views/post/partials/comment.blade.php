@@ -95,7 +95,7 @@
                     <p class="rtl commet-row-username "> {{{ $comment->user->name }}} </p>
                 </a>
             </div>
-            <div class=" col-3 d-flex justify-content-center ">
+            <div class=" col-3 d-flex justify-content-center pb-2 ">
                 <img class="commet-row-avatar" src="{{ asset('uploads/avatars/'.$comment->user->avatar) }}" alt="">
             </div>
         </div>
